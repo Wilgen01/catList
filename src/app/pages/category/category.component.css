@@ -1,0 +1,36 @@
+.filter{
+    color: #393939;
+    padding: 1rem ;
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, .18);
+    margin-bottom: 1rem;
+}
+
+.filter__title{
+    margin: .5rem 0;
+}
+
+.filter__input, .filter__select{
+    border: 1px solid #aeaeae;
+    padding: clamp(.2rem, 1vw, .5rem );
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+.gallery{
+    columns: 3 300px;
+    column-gap: 0.8em;
+}
+
+.gallery__image{
+    margin-bottom: .8rem;
+}
+
+
+.category__info{
+    color: #393939;
+    margin: 3rem 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2rem;
+}

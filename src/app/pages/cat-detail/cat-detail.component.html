@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div *ngIf="breed && isLoaded" class="catInfo container">
+    <img class="catInfo__img" [src]="breed.image.url" alt="">
+    <small class="catInfo__text"><strong>Origin:</strong>  {{breed.origin}} | <strong>Life Span:</strong>  {{breed.life_span}} years</small>
+    <h2 class="catInfo__title">{{breed.name}}</h2>
+    <p class="catInfo__paragraph">{{breed.description}}</p>
+    <div class="">
+        <strong class="catInfo__aptTitle">Adaptability:</strong>
+        <div class="catInfo-aptitude">
+            <img *ngFor="let value of [].constructor(breed.adaptability)" class="catInfo__pet" src="assets/icons/pet.svg" alt="">
+        </div>
+        <strong class="catInfo__aptTitle">Child Friendly:</strong>
+        <div class="catInfo-aptitude">
+            <img *ngFor="let value of [].constructor(breed.child_friendly)" class="catInfo__pet" src="assets/icons/pet.svg" alt="">
+        </div>
+        <strong class="catInfo__aptTitle">Afection Level:</strong>
+        <div class="catInfo-aptitude">
+            <img *ngFor="let value of [].constructor(breed.affection_level)" class="catInfo__pet" src="assets/icons/pet.svg" alt="">
+        </div>
+        <strong class="catInfo__aptTitle">Health Issues:</strong>
+        <div class="catInfo-aptitude">
+            <img *ngFor="let value of [].constructor(breed.health_issues)" class="catInfo__pet" src="assets/icons/pet.svg" alt="">
+        </div>
+
+    </div>
+</div>
+
+<app-loader *ngIf="!isLoaded"></app-loader>

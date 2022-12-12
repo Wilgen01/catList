@@ -1,0 +1,11 @@
+<div *ngIf="breed" class="card">
+    <div class="card__header">
+        <img class="card__img" [src]="breed.image? breed.image.url: 'assets/images/no-img.webp'" alt="">
+    </div>
+    <div class="card__body">
+        <h3 class="link" [routerLink]="['/detail', breed.id]">{{breed.name}}</h3>
+        <p>{{breed.description}}</p>
+        <p><strong>Origin:</strong>  {{breed.origin}}</p>
+        <p><strong>Life Span:</strong> {{breed.life_span}}</p>
+    </div>
+</div>

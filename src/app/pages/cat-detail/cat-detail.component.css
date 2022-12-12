@@ -1,0 +1,45 @@
+.catInfo{
+    color: #393939;
+    width: clamp(300px, 70%, 800px);
+    border-radius: 24px;
+    background: #f3f3f3;
+    padding: clamp(2rem, 3vw, 3rem) clamp(0.5rem, 3vw, 2rem);
+}
+
+.catInfo__img{
+    margin: auto;
+    width: clamp(200px, 50%, 500px);
+    margin-bottom: 2rem;
+}
+
+.catInfo__aptTitle{
+    font-weight: bold;
+    margin-bottom: .8rem;
+}
+
+.catInfo__title{
+    margin: .8rem 0;
+    text-align: center;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    font-weight: bold;
+}
+
+.catInfo__paragraph{
+    margin-bottom: 2rem;
+}
+
+.catInfo-aptitude{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 1rem 0;
+}
+
+.catInfo__pet{
+    display: block;
+    margin: auto;
+    width: clamp(7px, 5vh, 200px);
+}
+
+strong{
+    font-weight: bold;
+}

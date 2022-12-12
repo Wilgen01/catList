@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div *ngIf="isLoaded">
+    <div class="filter container">
+        <label class="filter__title">Filter:</label>
+        <input  class="filter__input" 
+                type="text" placeholder="By Name..." 
+                [formControl]="searchName">
+        <select class="filter__select" name="select" [formControl]="searchOrigin">
+            <option value="">By Country...</option>
+            <option *ngFor="let origin of originList" [value]="origin">{{origin}}</option>
+        </select>
+    </div>
+    <main *ngIf="breeds && !notFound" class="cards container" #scroll>
+        <app-card *ngFor="let breed of getBreedsOrFilteredBreeds()" [breed]="breed"></app-card>
+    </main>
+    <div    class="pagination" 
+            *ngIf="filteredBreeds.length == 0 && !notFound">
+        <h2>Page: </h2>
+        <select class="pagination__select" [formControl]="page">
+            <option *ngFor="let page of [].constructor(totalPages); let i = index" 
+                    [value]="i+1">
+                    {{i+1}}
+            </option>
+        </select>
+    </div>
+    
+    <div *ngIf="notFound" class="notFound">
+        Ooops, No encontramos lo que estabas buscando 😿
+    </div>
+</div>
+
+<app-loader *ngIf="!isLoaded"></app-loader>
+

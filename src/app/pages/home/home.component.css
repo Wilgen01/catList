@@ -1,0 +1,55 @@
+.cards{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 0.5em;
+}
+
+.filter{
+    color: #393939;
+    padding: 1rem ;
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, .18);
+    margin-bottom: 1rem;
+}
+
+.filter__title{
+    margin: .5rem 0;
+}
+
+.filter__input, .filter__select{
+    border: 1px solid #aeaeae;
+    padding: clamp(.2rem, 1vw, .5rem );
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+input::placeholder{
+    color: #7d7b7b;
+}
+
+select{
+    color: #7d7b7b;
+}
+
+.pagination{
+    color: #393939;
+    display: flex;
+    max-width: 100px;
+    margin: 2.5rem auto;
+}
+
+.pagination__select{
+    border: 1px solid #aeaeae;
+    width: 50px;
+    text-align: center;
+    margin: auto;
+}
+
+.notFound{
+    color: #393939;
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    text-align: center;
+    margin: 2rem auto;
+    width: 80%;
+
+}

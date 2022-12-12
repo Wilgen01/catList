@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<div>
+    <div class="filter container">
+        <label class="filter__title">Category:</label>
+        <select class="filter__select" 
+                name="select"
+                [formControl]="searchCategory">
+            <option value="">Select Category...</option>
+            <option *ngFor="let category of categories" 
+                    [value]="category.id">
+                    {{category.name}}
+            </option>
+        </select>
+    </div>
+</div>
+
+<div *ngIf="!isLoading" class="gallery container">
+    <img  class="gallery__image"  
+          *ngFor="let image of images" [src]="image.url" alt="cat-img">
+</div>
+
+<app-loader *ngIf="isLoading"></app-loader>
+
+
+<h1 *ngIf="images.length < 1" class="category__info">PLEASE, SELECT A CATEGORY 😺</h1>

@@ -1,0 +1,27 @@
+.nav{
+    background-color: var(--color-primario);
+    box-shadow: 0 1px 4px 4px rgba(0, 0, 0, .25);
+    display: flex;
+    margin-bottom: 1rem;
+    min-width: 300px;
+    padding: clamp(1rem, 2vw , 1.5rem);;
+    justify-content: space-between;
+}
+
+.nav__title{
+    font-size: clamp(1rem, 2.5vw , 3rem);
+}
+
+.nav__links{
+    display: flex;
+    font-size: clamp(0.9rem, 1.2vw , 1.5rem);
+    flex-direction: row;
+}
+
+.nav__item{
+    margin-left: .8rem;
+}
+
+.active{
+    font-weight: bold;
+}
